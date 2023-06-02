@@ -110,6 +110,21 @@ index.jsp :
 - Model method : addAttribut(String key, Object value)
 - ModelAndView : addObject(String key, Object value)
 
-7)JSP Expression Language to print values (JSTL for traversing) :
+7) JSP Expression Language to print values (JSTL for traversing) :
 - just add <%@page isELIgnored="false" %> in your jsp page 
 - no need to store value in variable you can directly write key names for printing values in ${key name}
+- JSTL dependency :
+```
+<!-- https://mvnrepository.com/artifact/jstl/jstl -->
+<dependency>
+    <groupId>jstl</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+</dependency>
+```
+- To use the JSTL add taglib library in your jsp page where you want to use this dependency
+```
+Link : https://docs.oracle.com/javaee/5/jstl/1.1/docs/tlddocs/c/tld-summary.html
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+```
