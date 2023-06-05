@@ -398,4 +398,17 @@ public class FormController {
 }
 ```
 
+9) User Registration Form Using Spring MVC and ORM :
+	- Dependency : spring ORM(5.2.3), hibernate-core(5.4.2), mySQL connector(5.1.30), spring mvc 
+	- HibernateTemplateClass : HibernateTemplate is the class of org.springframework.orm.hibernate3. HibernateTemplate provides the integration of hibernate and spring. Spring manages database connection DML, DDL etc commands by itself. HibernateTemplate has the methods like save,update, delete etc. Try to understand how to configure HibernateTemplate in our spring application.
 
+Add xml configuration in application.xml of spring application.
+```
+<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+<property name="sessionFactory">
+  <ref bean="sessionFactory" />
+</property>
+```
+
+- (access will be like this)controller->service layer->database layer(dao, repository)->DB
+- 
